@@ -1,0 +1,25 @@
+.pseudoelement {
+  width: 300px;
+}
+.pseudoelement:before {
+  content: "Hola Mundo!";
+}
+.ie-8 .pseudoelement:before {
+  content: 'Good Bye';
+}
+body {
+  background: #008080;
+  font-size: 0.9em;
+}
+body .primerhijo {
+  margin-bottom: 24px;
+}
+body > .primerhijo {
+  font-size: 18px;
+}
+.btn {
+  border-radius: 5px;
+}
+.btn--alert {
+  background: #f00;
+}

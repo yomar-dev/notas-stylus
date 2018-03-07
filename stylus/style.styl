@@ -1,0 +1,20 @@
+.pseudoelement
+	width 300px
+	&:before
+		content "Hola Mundo!"
+	.ie-8 &
+		&:before
+			content 'Good Bye'
+
+body
+	background teal
+	font-size .9em	
+	.primerhijo
+		margin-bottom 24px
+	> .primerhijo
+		font-size 18px
+		
+.btn
+	border-radius 5px
+	&--alert
+		background red
