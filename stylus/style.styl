@@ -1,20 +1,26 @@
+// Variables
+font-size-normal = 16px
+font-size-small = 14px
+
 .pseudoelement
-	width 300px
+	font-size: font-size-normal
+	width: 300px
 	&:before
 		content "Hola Mundo!"
 	.ie-8 &
 		&:before
-			content 'Good Bye'
+			content: 'Good Bye'
 
 body
 	background teal
-	font-size .9em	
+	font-size: .9em	
 	.primerhijo
-		margin-bottom 24px
+		font-size: font-size-small
+		margin-bottom: 24px
 	> .primerhijo
-		font-size 18px
+		padding: font-size-normal - font-size-small
 		
 .btn
-	border-radius 5px
+	border-radius: 5px
 	&--alert
-		background red
+		background: red

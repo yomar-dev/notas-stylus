@@ -1,4 +1,5 @@
 .pseudoelement {
+  font-size: 16px;
   width: 300px;
 }
 .pseudoelement:before {
@@ -12,10 +13,11 @@ body {
   font-size: 0.9em;
 }
 body .primerhijo {
+  font-size: 14px;
   margin-bottom: 24px;
 }
 body > .primerhijo {
-  font-size: 18px;
+  padding: 2px;
 }
 .btn {
   border-radius: 5px;
