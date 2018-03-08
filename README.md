@@ -107,3 +107,50 @@ mixin-min-width-landing(width = max-width-landing)
   padding: 2em 0;
 }
 ~~~
+
+
+### Condicionales ###
+**Ejemplo:** <br>
+~~~
+box(x, y, margin-only = true)
+	if margin-only
+		margin: x y
+	else
+		padding: x y
+
+tono(dark = true)
+	if dark
+		color: #fff
+		background: #000
+	else
+		color: #000
+		background: #fff
+		
+
+.div
+	box(10px, 15px)
+	tono()
+	
+.article
+	box(10px, 15px, false)
+	tono(false)
+~~~
+
+<br>Resultado: <br>
+~~~
+.div {
+  margin: 10px 15px;
+  color: #fff;
+  background: #000;
+}
+
+.article {
+  padding: 10px 15px;
+  color: #000;
+  background: #fff;
+}
+~~~
+
+
+
+[Documentación Stylus](http://stylus-lang.com/docs/)

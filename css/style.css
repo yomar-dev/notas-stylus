@@ -41,3 +41,13 @@ body > .primerhijo {
   min-width: 1024px;
   padding: 2em 0;
 }
+.div {
+  margin: 10px 15px;
+  color: #fff;
+  background: #000;
+}
+.article {
+  padding: 10px 15px;
+  color: #000;
+  background: #fff;
+}
