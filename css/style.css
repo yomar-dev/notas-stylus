@@ -25,3 +25,11 @@ body > .primerhijo {
 .btn--alert {
   background: #f00;
 }
+.section {
+  width: 800px;
+  margin: 0 auto;
+}
+.article {
+  width: 800px;
+  margin: 0 auto;
+}

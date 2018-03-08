@@ -1,5 +1,9 @@
 @import "_variables.styl"
 
+mixin-max-width()
+	width: 800px
+	margin: 0 auto;
+
 .pseudoelement
 	font-size: font-size-normal
 	width: 300px
@@ -22,3 +26,10 @@ body
 	border-radius: 5px
 	&--alert
 		background: red
+		
+
+.section
+	mixin-max-width()
+
+.article
+	mixin-max-width()

@@ -33,3 +33,33 @@ Una buena practica es módularizar y tener todo separado y organizado, podriamos
 @import "components/_grid.styl"
 @import "components/_utilities.styl"
 ~~~
+
+
+### Mixins ###
+Básicamente nos permiten reutilizar código ya que lo podemos agrupar en "función personalizada". <br>
+**Ejemplo:** <br>
+~~~
+mixin-max-width()
+	width: 800px
+	margin: 0 auto;
+
+
+.section
+	mixin-max-width()
+
+.article
+	mixin-max-width()
+~~~
+
+<br>El resultado final seria el siguiente: <br>
+~~~
+.section {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.article {
+  width: 800px;
+  margin: 0 auto;
+}
+~~~
