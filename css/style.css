@@ -33,3 +33,11 @@ body > .primerhijo {
   width: 800px;
   margin: 0 auto;
 }
+.hero {
+  min-width: 90%;
+  padding: 4em 0;
+}
+.landing {
+  min-width: 1024px;
+  padding: 2em 0;
+}

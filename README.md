@@ -63,3 +63,47 @@ mixin-max-width()
   margin: 0 auto;
 }
 ~~~
+
+
+### Mixins Paramétricos ###
+Este tipo de mixins puede recibir paramétros que luego van a ser remplazados por los varoles que se le indiquen. <br>
+**Ejemplo:** <br>
+~~~
+mixin-min-width(width)
+	min-width: width
+	padding: 4em 0
+
+
+.hero
+	mixin-min-width(90%)
+~~~
+
+<br>El resultado final seria el siguiente: <br>
+~~~
+.hero {
+  min-width: 90%;
+  padding: 4em 0;
+}
+~~~
+
+<br>También podemos utilizar valores por defecto que se asignaran en caso que no se especifiquen por parametro al momento de llamar al mixin. <br>
+**Ejemplo:** <br>
+~~~
+max-width-landing = 1024px
+
+mixin-min-width-landing(width = max-width-landing)
+	min-width: width
+	padding: 2em 0
+
+
+.landing
+	mixin-min-width-landing()
+~~~
+
+<br>El resultado final seria el siguiente: <br>
+~~~
+.landing {
+  min-width: 1024px;
+  padding: 2em 0;
+}
+~~~

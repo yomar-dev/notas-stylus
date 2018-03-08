@@ -1,8 +1,19 @@
 @import "_variables.styl"
 
+max-width-landing = 1024px
+
 mixin-max-width()
 	width: 800px
 	margin: 0 auto;
+	
+mixin-min-width(width)
+	min-width: width
+	padding: 4em 0
+	
+mixin-min-width-landing(width = max-width-landing)
+	min-width: width
+	padding: 2em 0
+
 
 .pseudoelement
 	font-size: font-size-normal
@@ -33,3 +44,9 @@ body
 
 .article
 	mixin-max-width()
+	
+.hero
+	mixin-min-width(90%)
+	
+.landing
+	mixin-min-width-landing()
