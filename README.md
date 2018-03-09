@@ -36,7 +36,7 @@ Una buena practica es módularizar y tener todo separado y organizado, podriamos
 
 
 ### Mixins ###
-Básicamente nos permiten reutilizar código ya que lo podemos agrupar en "función personalizada". <br>
+Básicamente nos permiten reutilizar código ya que lo podemos agrupar en una "función personalizada". <br>
 **Ejemplo:** <br>
 ~~~
 mixin-max-width()
@@ -152,5 +152,99 @@ tono(dark = true)
 ~~~
 
 
+### Directiva FOR ###
+Esta directiva nos permite realizar ciclos para realizar un determinado número de veces. <br>
+**Ejemplo:** <br>
+~~~
+grid-size = (1..12)
+
+.grid
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	flex-direction: row
+	
+[class^="grid--item"]
+	flex-shrink: 0
+	margin-right: 0
+	flex-grow: 1
+	
+for i in grid-size
+	.grid--item-{i}
+		width: (100 / i) * 1%
+~~~
+
+<br>Resultado:<br>
+~~~
+.grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+[class^="grid--item"] {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-right: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.grid--item-1 {
+  width: 100%;
+}
+
+.grid--item-2 {
+  width: 50%;
+}
+
+.grid--item-3 {
+  width: 33.333333333333336%;
+}
+
+.grid--item-4 {
+  width: 25%;
+}
+
+.grid--item-5 {
+  width: 20%;
+}
+
+.grid--item-6 {
+  width: 16.666666666666668%;
+}
+
+.grid--item-7 {
+  width: 14.285714285714286%;
+}
+
+.grid--item-8 {
+  width: 12.5%;
+}
+
+.grid--item-9 {
+  width: 11.11111111111111%;
+}
+
+.grid--item-10 {
+  width: 10%;
+}
+
+.grid--item-11 {
+  width: 9.090909090909092%;
+}
+
+.grid--item-12 {
+  width: 8.333333333333334%;
+}
+~~~
 
 [Documentación Stylus](http://stylus-lang.com/docs/)

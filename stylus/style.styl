@@ -75,3 +75,21 @@ tono(dark = true)
 .article
 	box(10px, 15px, false)
 	tono(false)
+	
+
+grid-size = (1..12)
+
+.grid
+	display: flex
+	flex-wrap: wrap
+	position: relative
+	flex-direction: row
+	
+[class^="grid--item"]
+	flex-shrink: 0
+	margin-right: 0
+	flex-grow: 1
+	
+for i in grid-size
+	.grid--item-{i}
+		width: (100 / i) * 1%
